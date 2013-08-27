@@ -99,7 +99,10 @@ window.Meme = function(image, canvas, top, bottom) {
 		canvas.width = w;
 		canvas.height = h;
 	};
-	setCanvasDimensions(image.width, image.height);	
+	
+	if (canvas.width != image.width || canvas.height != image.height) {
+		setCanvasDimensions(image.width, image.height);	
+	}
 
 	/*
 	Draw a centered meme string
